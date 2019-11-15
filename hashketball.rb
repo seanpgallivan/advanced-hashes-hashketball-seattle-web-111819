@@ -152,7 +152,11 @@ end
 def player_stats(name)
   game_hash.each do |side, team|
     team[:players].each do |stats|
-      
+      if stats[:player_name] == name
+        pp stats
+      end
+    end
+  end
 end
 
 
