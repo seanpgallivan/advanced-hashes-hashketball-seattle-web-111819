@@ -113,6 +113,19 @@ def game_hash
   }
 end
 
+def player_stats(name)
+  new = {}
+  game_hash.each do |side, team|
+    team[:players].each do |stats|
+      if stats[:player_name] == name
+        new = stats
+        new.shift
+      end
+    end
+  end
+  new
+end
+
 def num_points_scored(name)
   game_hash.each do |side, team|
     team[:players].each do |stats|
@@ -124,12 +137,6 @@ end
 def shoe_size(name)
   player_stats(name)[:shoe]
 end
-#  game_hash.each do |side, team|
-#    team[:players].each do |stats|
-#      return stats[:shoe] if stats[:player_name] == name
-#    end
-#  end
-#end
 
 def team_names
   new = []
@@ -151,18 +158,6 @@ def player_numbers(name)
   nums
 end
 
-def player_stats(name)
-  new = {}
-  game_hash.each do |side, team|
-    team[:players].each do |stats|
-      if stats[:player_name] == name
-        new = stats
-        new.shift
-      end
-    end
-  end
-  new
-end
 
 
 
