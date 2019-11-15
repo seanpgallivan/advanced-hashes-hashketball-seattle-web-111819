@@ -195,6 +195,7 @@ def winning_team
       end
     end
   end
+  pp score
   if score[0] > score[1]
     return game_hash[:home][:team_name]
   else
