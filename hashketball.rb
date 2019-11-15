@@ -172,7 +172,17 @@ def big_shoe_rebounds
   player_stats(new[1])[:rebounds]
 end
 
-def
+def most_points_scored
+  new = nil
+  game_hash.each do |side, team|
+    team[:players].each do |stats|
+      if !new || stats[:points] > new[0]
+        new = [stats[:points], stats[:player_name]]
+      end
+    end
+  end
+  new[1]
+end
 
 
 
