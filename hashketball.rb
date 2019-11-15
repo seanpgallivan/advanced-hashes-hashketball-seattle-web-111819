@@ -188,7 +188,6 @@ def winning_team
   game_hash.each do |side, team|
     pp side
     team[:players].each do |stats|
-      if side == 
     end
   end
 end
