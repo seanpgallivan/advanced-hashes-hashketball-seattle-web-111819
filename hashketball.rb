@@ -135,7 +135,7 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-  player_stats(name)[:shoe_size]
+  player_stats(name)[:shoe]
 end
 #  game_hash.each do |side, team|
 #    team[:players].each do |stats|
