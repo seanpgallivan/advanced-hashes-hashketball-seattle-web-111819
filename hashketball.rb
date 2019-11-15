@@ -1,5 +1,6 @@
-def gam_hash
+def game_hash
 
+end
 
 
 
