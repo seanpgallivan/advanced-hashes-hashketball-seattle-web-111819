@@ -184,5 +184,9 @@ def most_points_scored
   new[1]
 end
 
-
+def winning_team
+  home = {game_hash[:home][:team_name] => 0}
+  game_hash.each do |side, team|
+    
+end
 
