@@ -137,11 +137,11 @@ def team_names
   new
 end
 
-def player_numbers(team)
+def player_numbers(name)
   nums = []
-  game_hash.each do |side, t_stats|
-    if t_stats[:team_name] == team
-      t_stats[:players].each do |stats|
+  game_hash.each do |side, team|
+    if team[:team_name] == name
+      team[:players].each do |stats|
         nums << stats[:number]
       end
     end
@@ -150,7 +150,9 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  
+  game_hash.each do |side, team|
+    team[:players].each do |stats|
+      
 end
 
 
