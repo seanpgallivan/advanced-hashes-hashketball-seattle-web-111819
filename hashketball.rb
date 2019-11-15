@@ -150,13 +150,16 @@ def player_numbers(name)
 end
 
 def player_stats(name)
+  new = {}
   game_hash.each do |side, team|
     team[:players].each do |stats|
       if stats[:player_name] == name
-        pp stats
+        new = stats
+        new.shift
       end
     end
   end
+  new
 end
 
 
