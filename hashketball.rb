@@ -214,6 +214,17 @@ def player_with_longest_name
   new[1]
 end
       
+def long_name_steals_a_ton?
+  new = nil
+  game_hash.each do |side, team|
+    team[:players].each do |stats|
+      if !new || stats[:steals] > new[0]
+        new = [stats[:steals], stats[:player_name]]
+      end
+    end
+  end
+  new[1] == player_with_longest_name
+end
 
 
 
