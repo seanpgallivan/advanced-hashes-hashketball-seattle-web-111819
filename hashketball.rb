@@ -1,5 +1,4 @@
-# Write your code here!
-
+def gam_hash
 
 
 
