@@ -189,7 +189,7 @@ def winning_team
   game_hash.each do |side, team|
     team[:players].each do |stats|
       pp side.to_s
-      if side.to_s == ":home"
+      if side.to_s == "home"
         score[0] += stats[:points]
       else
         score[1] += stats[:points]
