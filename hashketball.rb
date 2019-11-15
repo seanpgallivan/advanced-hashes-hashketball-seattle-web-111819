@@ -142,6 +142,7 @@ def player_numbers(team)
   game_hash.each do |side, t_stats|
     pp t_stats[:team_name]
     if t_stats[:team_name] == team
+      pp "got here"
       t_stats[:players].each do |stats|
         nums << stats[:number]
       end
