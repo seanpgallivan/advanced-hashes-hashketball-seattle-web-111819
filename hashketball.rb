@@ -158,9 +158,12 @@ def big_shoe_rebounds
   new = nil
   game_hash.each do |side, team|
     team[:players].each do |stats|
-      new = {:player_name
+      if !new || stats[:shoe] > new[0]
+        new = [stats[:shoe], stats[:player_name]]
+      end
     end
   end
+  player_stats(new[1])[:rebounds]
 end
 
 
