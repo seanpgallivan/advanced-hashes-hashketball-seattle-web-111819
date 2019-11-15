@@ -154,7 +154,14 @@ def player_numbers(name)
   nums
 end
 
-
+def big_shoe_rebounds
+  new = nil
+  game_hash.each do |side, team|
+    team[:players].each do |stats|
+      new = {:player_name
+    end
+  end
+end
 
 
 
