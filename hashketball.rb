@@ -159,7 +159,7 @@ def player_stats(name)
       end
     end
   end
-  new
+  pp new
 end
 
 
